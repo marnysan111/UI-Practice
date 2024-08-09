@@ -1,0 +1,9 @@
+services:
+  next:
+    build: ./next
+    container_name: next
+    volumes:
+      - ./next:/usr/src
+    ports:
+      - 3000:3000
+    restart: always
