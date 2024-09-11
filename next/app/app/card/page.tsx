@@ -1,4 +1,4 @@
-import { DataCard } from "@/components/Card"
+import { DataCard, Card } from "@/components/Card"
 
 type Content = {
     title: string
@@ -13,17 +13,29 @@ export default function CardPage() {
         { title: "hoge4", content: "カードコンポーネント" }
     ]
     return (
-        <>
-            <div className="grid grid-cols-6">
+        <div className="container mx-auto">
+            <div className="grid grid-cols-12">
                 {contents.map((value, key) => (
-                    <div key={key} className="m-4">
+                    <div className="col-span-3 m-4" key={key}>
                         <DataCard
                             title={value.title}
                             content={value.content}
                         />
                     </div>
+
                 ))}
             </div>
-        </>
+            <div className="grid grid-cols-12">
+                {contents.map((value, key) => (
+                    <div key={key} className="col-span-3 m-4">
+                        <Card
+                            title={value.title}
+                            content={value.content}
+                            link="/card"
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
     )
 }

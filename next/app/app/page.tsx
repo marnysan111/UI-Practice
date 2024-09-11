@@ -10,11 +10,12 @@ export default function Home() {
     { title: "カードコンポーネント", content: "カードコンポーネント。というかこれ", link: "card" },
     { title: "グリッド", content: "Gridを使ったレイアウト", link: "grid" },
     { title: "テーブルコンポーネント", content: "データテーブルを使ったUI", link: "table" },
-    { title: "グラフ", content: "いろんなグラフを作ってみよう", link: "chart" }
+    { title: "ボタン", content: "色々なボタン", link: "button" },
+
   ]
 
   return (
-    <main className="">
+    <main className="container mx-auto">
       <div className="grid grid-cols-2">
         {contents.map((value, key) => (
           <div key={key} className="m-4">
